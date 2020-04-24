@@ -38,14 +38,14 @@ class KegControl extends React.Component {
         }
     }
 
-    return (
-        <React.Fragment>
-          <div className="storeFront">
-            {currentlyVisibleState}
-            <button onClick ={this.handleClick}>{buttonText}</button>
-          </div>
-        </React.Fragment>
-      );
+            return (
+                <React.Fragment>
+                <div>
+                    {currentlyVisibleState}
+                    <button onClick ={this.handleClick}>{buttonText}</button>
+                </div>
+                </React.Fragment>
+            );
         }
    
 
