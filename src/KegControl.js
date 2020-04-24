@@ -18,11 +18,35 @@ class KegControl extends React.Component {
         this.setState({
             masterKegList: newMasterKegList,
             formVisibleOnPage: false
-        })
+        });
     }
 
+    render() {
+        let currentlyVisibleState = null;
+        let buttonText = null;
+        if (this.state.selectedKeg != null) {
+            currentlyVisibleState = <KegDetail />
+            buttonText = "Return to Kegs";
+        } else if (this.state.formVisibleOnPage) {
+          currentlyVisibleState = <AddNewKeg onNewKeg={this.handleAddKegToList} />
+          buttonText = "Return to List";
+        } else {
+            currentlyVisibleState = <KegList
+            kegList={this.state.masterKegList}
+            onKegSelect={this.handleChangingSelected} />
+          buttonText = "Add Keg";
+        }
+    }
 
-    
-}
+    return (
+        <React.Fragment>
+          <div className="storeFront">
+            {currentlyVisibleState}
+            <button onClick ={this.handleClick}>{buttonText}</button>
+          </div>
+        </React.Fragment>
+      );
+        }
+   
 
 export default KegControl;
