@@ -8,7 +8,7 @@ class KegControl extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            formVisibleOnPage: false
+            formVisibleOnPage: false,
             masterKegList: []
         };
     }
@@ -24,3 +24,5 @@ class KegControl extends React.Component {
 
     
 }
+
+export default KegControl;
