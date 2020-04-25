@@ -6,6 +6,16 @@ function AddKegForm(props) {
 
     function handleAddKegFormSubmission(event) {
         event.preventDefault();
-        
+        props.onAddKegCreation({
+            name: event.target.name.value,
+            brand: event.target.brand.value,
+            price: event.target.price.value,
+            ALC: event.target.ALC.value,
+            pint: event.target.pint.value,
+            id: v4()
+
+        });
     }
+
+    return 
 }
