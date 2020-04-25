@@ -29,3 +29,5 @@ function AddKegForm(props) {
 AddKegForm.propTypes = {
     onAddKegCreation: PropTypes.func
 }
+
+export default AddKegForm;
