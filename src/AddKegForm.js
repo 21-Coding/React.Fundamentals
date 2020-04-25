@@ -25,3 +25,7 @@ function AddKegForm(props) {
         </React.Fragment>
     );
 }
+
+AddKegForm.propTypes = {
+    onAddKegCreation: PropTypes.func
+}
