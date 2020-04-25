@@ -17,5 +17,11 @@ function AddKegForm(props) {
         });
     }
 
-    return 
+    return (
+        <React.Fragment>
+            <ReusableForm
+            formHandler={handleAddKegFormSubmission}
+            buttonText="Add Keg" />
+        </React.Fragment>
+    );
 }
