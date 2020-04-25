@@ -35,9 +35,10 @@ function ReusableForm(props) {
                         type='number'
                         name='pint'
                         placeholder='Pint' required />
-                    <button 
+                    <button className="formButton" type='submit'>{props.buttonText}</button>
                         
                 </form>
             </div>
         </React.Fragment>
-    )
+    );
+}
