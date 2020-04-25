@@ -5,7 +5,7 @@ import AddKeg from './AddKegForm.js'
 
 class KegControl extends React.Component {
 
-    constructor KegControl extends React.Component {
+  
         constructor(props) {
             super(props);
             this.state = {
@@ -28,9 +28,9 @@ class KegControl extends React.Component {
                 }));
             }
         }
-        handleAddingKegToList = (newKeg) => {
-            const newMasterKegList = this.state
-        }
+        // handleAddingKegToList = (newKeg) => {
+        //     const newMasterKegList =
+        // }
 
 
         handleChangingSelectedKeg = (id) => {
@@ -71,6 +71,6 @@ class KegControl extends React.Component {
 
 
     }
-}
+
 
 export default KegControl;
