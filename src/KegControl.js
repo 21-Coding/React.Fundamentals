@@ -1,52 +1,50 @@
-import React from 'react';
-import AddingKegs from './AddKegForm.js';
-import KegList from './KegList.js';
-
+import React from 'react'; 
+import KegDetails from './KegDetails.js'
+import KegList from './KegList.js'
+import AddKeg from './AddKegForm.js'
 
 class KegControl extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            formVisibleOnPage: false,
-            masterKegList: []
-        };
-    }
-
-    handleAddKegToList = (newKeg) => {
-        const newMasterKegList = this.state.masterKegList.concat(newKeg);
-        this.setState({
-            masterKegList: newMasterKegList,
-            formVisibleOnPage: false
-        });
-    }
-
-    render() {
-        let currentlyVisibleState = null;
-        let buttonText = null;
-        if (this.state.selectedKeg != null) {
-            currentlyVisibleState = <KegDetail />
-            buttonText = "Return to Kegs";
-        } else if (this.state.formVisibleOnPage) {
-          currentlyVisibleState = <AddNewKeg onNewKeg={this.handleAddKegToList} />
-          buttonText = "Return to List";
-        } else {
-            currentlyVisibleState = <KegList
-            kegList={this.state.masterKegList}
-            onKegSelect={this.handleChangingSelected} />
-          buttonText = "Add Keg";
+    constructor KegControl extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state = {
+                formVisibleOnPage: false,
+                masterKegList: [],
+                selectedKegList: []
+            };
         }
-    }
 
-            return (
-                <React.Fragment>
-                <div>
-                    {currentlyVisibleState}
-                    <button onClick ={this.handleClick}>{buttonText}</button>
-                </div>
-                </React.Fragment>
-            );
+        handleClick = () => {
+            if (this.state.selectedKeg !== null) {
+                this.setState({
+                    formVisibleOnPage: false,
+                    selectedKeg: null
+                });
+            } else {
+                this.setState(prevState => ({
+                    formVisibleOnPage: false,
+                    selectedKeg: null
+                }));
+            }
         }
-   
 
-export default KegControl;
+        handleChangingSelectedKeg = (id) => {
+            const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id) [0];
+            this.setState({ selectedKeg: selectedKeg });
+        }
+
+        render() {
+            let currentVisibleState = null;
+            let buttonText = null;
+
+            if (this.state.selectedKeg != null) {
+                currentVisibleState = <KegDetails
+                keg = {this.state.selectedKeg} />
+                buttonText = "Return to Kegs";
+            } else if ()
+        }
+
+
+    }
+}
