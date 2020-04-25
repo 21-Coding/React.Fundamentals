@@ -28,6 +28,10 @@ class KegControl extends React.Component {
                 }));
             }
         }
+        handleAddingKegToList = (newKeg) => {
+            const newMasterKegList = this.state
+        }
+
 
         handleChangingSelectedKeg = (id) => {
             const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id) [0];
@@ -42,9 +46,31 @@ class KegControl extends React.Component {
                 currentVisibleState = <KegDetails
                 keg = {this.state.selectedKeg} />
                 buttonText = "Return to Kegs";
-            } else if ()
+            } else if (this.state.formVisibleOnPage) {
+                currentVisibleState = <AddKegForm onNewKeg = {this.handleAddingKegToList} />
+                buttonText = "Return to Keg List";
+
+            } else {
+                currentVisibleState = <KegList
+                kegList={this.state.masterKegList}
+                onKegSelection={this.handleChangeSelectedKeg}
+                onMinusOne={this.handleMinusOne} />
+            buttonText = "Add new Keg";
+
+            }
+
+            return (
+                <React.Fragment>
+                    {currentVisibleState}
+                    <button onClick ={this.handleClick}>
+                    {buttonText}
+                    </button>
+                </React.Fragment>
+            );
         }
 
 
     }
 }
+
+export default KegControl;
