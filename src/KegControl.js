@@ -28,9 +28,9 @@ class KegControl extends React.Component {
                 }));
             }
         }
-        // handleAddingKegToList = (newKeg) => {
-        //     const newMasterKegList =
-        // }
+        handleAddingKegToList = (newKeg) => {
+            const newMasterKegList =
+        }
 
 
         handleChangingSelectedKeg = (id) => {

@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <div className="header">
-      <h1>Tap Room Breweryy</h1>
+      <h1>Tap Room Brewery</h1>
     </div>
   );
 }
