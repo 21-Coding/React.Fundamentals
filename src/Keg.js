@@ -41,6 +41,7 @@ Keg.propTypes = {
     pints: PropTypes.number.isRequired,
     id: PropTypes.string, 
     whenClicked: PropTypes.func,
+    whenPintDrop: PropTypes.func
     
 }
 
