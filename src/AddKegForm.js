@@ -14,8 +14,7 @@ function AddKegForm(props) {
             ALC: event.target.ALC.value,
             pint: event.target.pint.value,
             id: v4()
-
-        });
+         });
     }
 
     return (
