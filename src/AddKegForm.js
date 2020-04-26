@@ -7,7 +7,7 @@ function AddKegForm(props) {
 
     function handleAddKegFormSubmission(event) {
         event.preventDefault();
-        props.onAddKegCreation({
+        props.onAddKeg({
             name: event.target.name.value,
             brand: event.target.brand.value,
             price: event.target.price.value,
