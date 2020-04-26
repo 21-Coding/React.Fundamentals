@@ -33,8 +33,8 @@ function ReusableForm(props) {
                         placeholder='ALC' />
                     <input
                         type='number'
-                        name='pint'
-                        placeholder='Pint' required />
+                        name='pints'
+                        placeholder='Pints' required />
                     <button className="formButton" type='submit'>{props.buttonText}</button>
                         
                 </form>
