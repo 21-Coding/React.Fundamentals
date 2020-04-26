@@ -13,6 +13,8 @@ function Keg(props) {
 
     return (
         <React.Fragment>
+            <div onClick={() => props.whenClicked(props.id)}>
+
             <div>
                 <p>Name: {props.name}</p>
                 <p>Brand: {props.brand}</p>
@@ -23,6 +25,8 @@ function Keg(props) {
                     <button type="submit">Add</button>
                     <button type="submit">Remove</button>
                  </div>
+            </div>
+
             </div>
 
         </React.Fragment>
