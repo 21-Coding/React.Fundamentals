@@ -22,7 +22,8 @@ function Keg(props) {
                 <p>ALC: {props.ALC}%</p>
                 <p>Pints: {props.pints}</p>
                 <div>
-                    
+                <button onClick={()=> props.whenPintDrop(props.id)} type="submit">-1</button>
+                <button onClick={() => props.whenClicked(props.id)} type="submit">Details</button>
                  </div>
             </div>
 

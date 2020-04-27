@@ -43,9 +43,8 @@ class KegControl extends React.Component {
 
         handlePintDrop = (id) => {
             const currentlySelectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
-            console.log(this.state.masterKegList);
-            const newPintOfKeg = currentlySelectedKeg.pint - 1;
-            const updatedKeg = {...currentlySelectedKeg, pint: newPintOfKeg};
+            const newPintOfKeg = currentlySelectedKeg.pints - 1;
+            const updatedKeg = {...currentlySelectedKeg, pints: newPintOfKeg};
             const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);
             this.setState({
               masterKegList: [...previousKegList, updatedKeg],
